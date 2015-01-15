@@ -1,0 +1,6 @@
+# Don't track for npm stuff
+node_modules/
+npm-debug.log
+
+# Don't track output files
+build/
