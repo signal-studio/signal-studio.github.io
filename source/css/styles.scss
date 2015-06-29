@@ -4,6 +4,10 @@
 @import "modules/variables";
 @import "modules/inherits";
 
-// Partials
+// Resets
 @import "partials/normalize";
 @import "partials/reset";
+
+// Site stuff
+@import "partials/animations";
+@import "partials/general";

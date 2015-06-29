@@ -4,3 +4,7 @@ npm-debug.log
 
 # Don't track output files
 build/
+components/
+
+# Don't track design files
+resources/
