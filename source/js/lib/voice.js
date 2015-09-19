@@ -3,7 +3,7 @@ var howler = require('./howler');
 
 var events = new Emitter();
 var sound = new Howl({
-	volume: 0.3,
+	volume: 0.5,
 	src: ['assets/ping.mp3']
 });
 
