@@ -3,9 +3,9 @@ node_modules/
 npm-debug.log
 
 # Don't track output files
-build/
-components/
+/.cache
+/dist
 
 # Don't track design files
-resources/
-design/
+/resources
+/design
