@@ -7,7 +7,7 @@ export default function (parent) {
   }
 
   const node = document.createElement('div');
-  const rate = random(0.5, 4.0);
+  const rate = random(0.5, 2.0);
   node.classList.add('Node');
   node.style.top = `${random(0, 100)}%`;
   node.style.left = `${random(0, 100)}%`;

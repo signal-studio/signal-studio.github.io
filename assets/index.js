@@ -2,6 +2,8 @@ import makeNode from './lib/make-node';
 import random from './lib/random';
 import voice from './lib/voice';
 
+let hasActivePermission = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   const $background = document.getElementById('background');
   const $title = document.getElementById('title');
