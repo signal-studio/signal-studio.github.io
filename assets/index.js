@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   voice.on('load', () => {
+    $title.classList.add('loaded');
     while (activeNodes < 5) {
       updateNodes();
     }
