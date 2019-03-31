@@ -11,7 +11,8 @@
     "howler": "^2.1.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.16.4"
   },
   "repository": "git@github.com:signal-studio/signal-studio.github.io.git",
   "author": "Ross Zurowski <ross@rosszurowski.com>",

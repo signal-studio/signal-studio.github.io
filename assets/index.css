@@ -1,11 +1,11 @@
 @import "@rosszurowski/vanilla/lib/vanilla.css";
 
 @font-face {
-  font-family: 'Atlas Grotesk';
+  font-family: "Atlas Grotesk";
   font-weight: 400;
   font-style: normal;
-  src: url('./fonts/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
-       url('./fonts/AtlasGrotesk-Regular-Web.woff') format('woff');
+  src: url("./fonts/AtlasGrotesk-Regular-Web.woff2") format("woff2"),
+    url("./fonts/AtlasGrotesk-Regular-Web.woff") format("woff");
 }
 
 html,
@@ -26,6 +26,7 @@ html {
   font-family: "Atlas Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 main {
@@ -34,23 +35,52 @@ main {
   justify-content: center;
 }
 
-main svg {
-  position: relative;
-  top: 0.1em;
-}
-
-h1 {
-  font-size: 2vmax;
+#title {
+  font-size: 5vmin;
   letter-spacing: 0.1px;
-  opacity: 0.0;
+  opacity: 0;
+  text-indent: -0.15em;
 }
 
-h1.loaded {
-  animation: fade-in 400ms ease both;
+.loaded #title {
+  animation: fade-in 800ms 200ms ease both;
 }
 
-h1 > span {
-  position: relative;
+#title > svg {
+  position: absolute;
+  top: 0.2em;
+  right: -0.8em;
+}
+
+#notice {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  color: rgb(125, 129, 133);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30%);
+  transition-delay: 450ms;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  width: 100%;
+}
+
+.loaded #notice {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.loaded #notice.hidden {
+  transition-delay: 0ms;
+  transition-duration: 200ms;
+  opacity: 0;
+  transform: translateY(30%);
 }
 
 .Node {
@@ -64,40 +94,26 @@ h1 > span {
 
 @keyframes fade-in {
   0% {
-    opacity: 0.0;
-    transform: translateY(15px);
+    opacity: 0;
+    transform: translateY(25%);
   }
   100% {
-    opacity: 1.0;
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes pulse {
   0% {
-    opacity: 0.0;
+    opacity: 0;
     transform: scale(0.05);
   }
   5% {
-    opacity: 1.0;
+    opacity: 1;
     transform: scale(0.25);
   }
   100% {
-    opacity: 0.0;
-    transform: scale(1.0);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    background-color: #000;
-    color: white;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #000;
-    color: white;
+    opacity: 0;
+    transform: scale(1);
   }
 }

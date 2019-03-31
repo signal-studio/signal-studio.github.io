@@ -1,18 +1,20 @@
-import random from './random';
-import voice from './voice';
+import random from "./random";
+import voice from "./voice";
 
-export default function (parent) {
+const PADDING = 10;
+
+export default function(parent) {
   if (!parent) {
-    throw new Error('Nodes must be passed a parent element');
+    throw new Error("Nodes must be passed a parent element");
   }
 
-  const node = document.createElement('div');
+  const node = document.createElement("div");
   const rate = random(0.5, 2.0);
-  node.classList.add('Node');
-  node.style.top = `${random(0, 100)}%`;
-  node.style.left = `${random(0, 100)}%`;
+  node.classList.add("Node");
+  node.style.top = `${random(PADDING, 100 - PADDING)}%`;
+  node.style.left = `${random(PADDING, 100 - PADDING)}%`;
 
-  function attach () {
+  function attach() {
     requestAnimationFrame(() => {
       parent.appendChild(node);
       const playbackId = voice.play();
@@ -20,7 +22,7 @@ export default function (parent) {
     });
   }
 
-  function detach () {
+  function detach() {
     parent.removeChild(node);
   }
 
