@@ -63,6 +63,7 @@ main {
   text-align: center;
   text-transform: uppercase;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(30%);
   transition-delay: 450ms;
   transition-duration: 500ms;
