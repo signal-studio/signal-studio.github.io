@@ -37,7 +37,7 @@ main {
 
 #title {
   font-size: 5vmin;
-  letter-spacing: 0.1px;
+  letter-spacing: -1.25px;
   opacity: 0;
   text-indent: -0.15em;
 }
